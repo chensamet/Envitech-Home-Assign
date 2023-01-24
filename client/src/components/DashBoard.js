@@ -1,5 +1,8 @@
 import React, {Fragment} from 'react'
 import Legends from '../Legends.json';
+import './DashBoard.css';
+import Legend from './Legend'
+
 
 const onClickButton = (e) => {
     console.log("On click");
@@ -16,40 +19,44 @@ const legendByLegendID = Legends.Legends.reduce((acc, a) =>
  const DashBoard = () => {
     return (
         <Fragment>
-            <h1>DashBoard</h1>
+            
+            {/* <h1>DashBoard</h1> */}
+            <section id="navbar">
             {
                 Legends.MonitorType.map(monitorType => 
                     {
-                        return <ul>
-                            <li key={monitorType.Id}>{monitorType.description}</li>
-                            <ul>
+                        return  <ul>
+                            <li key={monitorType.Id}>{monitorType.description}
                                 {
                                     monitorByMonitorTypeID[monitorType.Id].map(monitor => 
                                     {
                                         return <ul>
-                                            <li>{monitor.Name}</li>
-                                            <ul>
-                                                {
-                                                    legendByLegendID[monitorType.LegendId].map(legend =>
+                                            <li>{monitor.Name}
+                                                <ul>
                                                     {
-                                                        return legend.tags.map(tag => {
-                                                            return <li color={tag.Color}>{tag.Label}</li>    
-                                                        })
-                                                        
-                                                    })
-                                                }
-                                            </ul>
+   
+                                                        // legendByLegendID[monitorType.LegendId].map(legend =>
+                                                        // {
+                                                        //     return legend.tags.map(tag => {
+                                                        //         return <li color={tag.Color}>{tag.Label}</li>    
+                                                        //     })
+                                                            
+                                                        // })
+                                                    }
+                                                </ul>
+                                            </li>
                                         </ul>
                                     })
                                 }
-                            </ul>
-                        </ul>       
+                            </li>
+                        </ul>     
                     }
                 )
-                
+               
             }
+             </section>  
 
-
+            
         </Fragment>
     )
 }
