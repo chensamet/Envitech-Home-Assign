@@ -1,5 +1,4 @@
-import logo from "./logo.svg";
-import "./App.css";
+
 import DashBoard from "./components/DashBoard";
 import Legend from "./components/Legend";
 import { Fragment } from "react";

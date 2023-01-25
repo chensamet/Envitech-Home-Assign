@@ -3,15 +3,19 @@ import "./DashBoard.css";
 
 const Navbar = (props) => {
   const { monitorTypes, monitor, onLegendSelected } = props;
-  const monitorByMonitorTypeID = monitor.reduce((acc, a) => 
-    ((acc[a.MonitorTypeId] = acc[a.MonitorTypeId] || []).push(a), acc), {})
+  const monitorByMonitorTypeID = monitor.reduce(
+    (acc, a) => (
+      (acc[a.MonitorTypeId] = acc[a.MonitorTypeId] || []).push(a), acc
+    ),
+    {}
+  );
   return (
     <section class="menu" id="navbar">
       <ul>
         {monitorTypes.map((monitorType) => {
           return (
             <li>
-              {monitorType.description}
+              {monitorType.Name}
               <ul>
                 {monitorByMonitorTypeID[monitorType.Id].map((monitor) => {
                   return (

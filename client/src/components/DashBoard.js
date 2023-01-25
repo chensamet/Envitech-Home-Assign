@@ -21,45 +21,7 @@ const legendByLegendID = Legends.Legends.reduce((acc, a) =>
         <Fragment>
             <Legend legend={legend}/>
             <Navbar monitorTypes={Legends.MonitorType} monitor={Legends.Monitor} onLegendSelected={(legendId) => onLegendSelected(legendId)}/>
-            
-       
-            {/* <section id="navbar">
-            {
-                Legends.MonitorType.map(monitorType => 
-                    {
-                        return  <ul>
-                            <li key={monitorType.Id}>{monitorType.description}
-                                {
-                                    monitorByMonitorTypeID[monitorType.Id].map(monitor => 
-                                    {
-                                        return <ul>
-                                            <li>{monitor.Name}
-                                                <ul>
-                                                    {
-   
-                                                        // legendByLegendID[monitorType.LegendId].map(legend =>
-                                                        // {
-                                                        //     return legend.tags.map(tag => {
-                                                        //         return <li color={tag.Color}>{tag.Label}</li>    
-                                                        //     })
-                                                            
-                                                        // })
-                                                    }
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    })
-                                }
-                            </li>
-                        </ul>     
-                    }
-                )
-               
-            }
-             </section>   */}
-
-            
-        </Fragment>
+             </Fragment>
     )
 }
 
