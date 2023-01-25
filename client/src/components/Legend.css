@@ -1,0 +1,10 @@
+  .lagent li::marker
+  {
+      color: black;
+  }
+
+  .lagent {
+    padding:10px;
+    list-style-type: square;
+    list-style-position: inside;
+  }

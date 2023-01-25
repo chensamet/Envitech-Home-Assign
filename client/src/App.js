@@ -10,7 +10,6 @@ import React, { useState } from 'react';
 const App = () => (
   <Fragment>
     <DashBoard />
-    <Legend />
   </Fragment>
 );
 

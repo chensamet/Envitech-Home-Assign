@@ -9,22 +9,81 @@ ul{
   
   #navbar > ul > li{
     display:inline-block;
-    background-color: #ccc;
+    background-color: #8FE3CF;
+    padding:1em;
   }
   
   #navbar ul ul{
     display:none;
     position:absolute;
     top:100%;
-    background-color:#fadde8;
+    background-color:#256D85;
   }
   
   #navbar ul li:hover > ul{
     display:block;
   }
-  
-  #navbar ul ul ul{
-    top:0;
-    left:100%;
-    background-color:#71efd3;
-  }
+
+
+
+  .menu
+/* layout main menu */
+ {
+    clear:both;
+    float:left;
+    margin-top:1em;
+    padding-bottom:1em;
+    width:100%;
+    background-color:gimgrey;
+    background-repeat:no-repeat;
+}
+ul.menu {
+    display: table;
+    margin-left: auto;
+    margin-right: 0em;
+}
+.menu li
+/* horizontal menu layout */
+ {
+    display: inline-block;
+    border: 3px solid #256D85;
+    margin-right:30px;
+    background-color: #002B5B;
+}
+.menu li a:hover
+/* link style on-mouse-over */
+ {
+    color:#FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.menu li:hover
+/* button style on-mouse-over */
+ {
+    border: 3px solid #256D85;
+    background-color: #002B5B;
+}
+.menu li a
+/* link style */
+ {
+    color:#FFFFFF;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.7em 1em 0.7em 1em;
+}
+.menu li.active a
+/* active menu item style */
+ {
+    color:#FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.menu li.active
+/* active menu button style */
+ {
+    border: 3px solid #FFFFFF;
+    border-radius: 10px;
+    background-color: #282A3A;
+}
