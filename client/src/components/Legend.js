@@ -6,15 +6,13 @@ const Legend = (props) => {
   return (
     <Fragment>
       <h2>Legend</h2>
-      <div>
         <ul class="lagent">
           {legend?.map((legend) => {
             return legend.tags.map((tag) => {
-              return <li style={{"color": tag.Color}}>{tag.Label}</li>
+              return <li style={{ color: tag.Color }}>{tag.Label}</li>;
             });
           })}
         </ul>
-      </div>
     </Fragment>
   );
 };

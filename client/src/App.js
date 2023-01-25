@@ -1,10 +1,7 @@
-
 import DashBoard from "./components/DashBoard";
 import Legend from "./components/Legend";
 import { Fragment } from "react";
-import React, { useState } from 'react';
-
-
+import React, { useState } from "react";
 
 const App = () => (
   <Fragment>
